@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box = "lfs-host"
     config.vm.box_url = "https://www.dropbox.com/s/gxouugzbnjlny1k/debian-7.0-amd64-minimal.box?dl=1"
     config.vm.provision "shell", path: "provision.sh"
-    config.vm.synced_folder "/Users/ethervoid/development/lab/lfs/stuff", "/home/vagrant"
+    config.vm.synced_folder "/Users/ethervoid/development/lab/lfs/stuff", "/home/vagrant/stuff"
 
     config.vm.provider "virtualbox" do |vb|
         unless File.exist?(lfs_disk)
